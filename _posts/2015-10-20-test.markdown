@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "test"
+date:   2015-10-20
+categories: [测试]
+auther: 刘雷刚
+---
+
+test

@@ -1,0 +1,25 @@
+# Site settings
+title: 糗百平台组
+# safe: false
+email: liuleigang@qiushibaike.com
+description: > # this means to ignore newlines until "baseurl:"
+  Welcome to our blogs!
+baseurl: "/shares" # the subpath of your site, e.g. /blog/
+url: "http://qbplatform.github.io" # the base hostname & protocol for your site
+# twitter_username: jekyllrb
+github_username:  qbplatform
+
+# Build settings
+pygments: true
+excerpt_separator: "\n\n\n"
+paginate: 6
+markdown: redcarpet
+redcarpet:
+    extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]
+
+
+#comments
+comments:
+    provider:     duoshuo
+    duoshuo:
+      short_name: littlegrow

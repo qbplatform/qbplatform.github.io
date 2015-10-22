@@ -1,0 +1,43 @@
+---
+layout: default
+title: 首页
+---
+
+<div class="home">
+    <!-- This loops through the paginated posts -->
+    <ul>
+        {% for post in paginator.posts %}
+            <li>
+                <h5>
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </h5>
+                <span class="post-meta">Auther:{{ post.auther }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time:{{ post.date | date: "%Y-%m-%d" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Tags:{% for category in post.categories %}
+                    {{ category }}&nbsp;&nbsp;
+                {% endfor %}</span>
+            </li>
+            <br>
+        {% endfor %}
+    </ul>
+
+    <!-- Pagination links -->
+    <div class="pagination">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous">Previous</a>
+        {% else %}
+        <span class="previous">Previous</span>
+        {% endif %}
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="page_number ">Cur:&nbsp;&nbsp;{{ paginator.page }}&nbsp;／&nbsp;{{ paginator.total_pages }}</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next">Next</a>
+        {% else %}
+        <span class="next ">Next</span>
+        {% endif %}
+    </div>
+
+
+</div>

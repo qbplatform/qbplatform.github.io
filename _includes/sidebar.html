@@ -1,0 +1,30 @@
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>{{ site.description }}</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
+
+    <!--{% for page in site.pages %}-->
+        <!--{% if page.category %}-->
+        <!--<a class="page-link sidebar-nav-item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>-->
+        <!--{% endif %}-->
+    <!--{% endfor %}-->
+    <a class="page-link sidebar-nav-item" href="{{ site.baseurl }}/navigations/categories.html">分类</a>
+    <a class="page-link sidebar-nav-item" href="{{ site.baseurl }}/navigations/archives.html">归档</a>
+
+    <span class="sidebar-nav-item">Currently version 0.0.1</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; {{ site.time | date: '%Y' }}. All rights reserved.
+    </p>
+  </div>
+</div>
