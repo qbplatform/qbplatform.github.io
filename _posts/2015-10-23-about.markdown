@@ -18,7 +18,7 @@ auther: 刘雷刚
 5. 本地预览OK，在项目根目录下执行`make`命令，上传您的博客到github，稍等片刻，就可以在[qbplatform][1]上浏览自己的博客
 
 #####注意事项：
-1. 博客文件名必须使用**`yyyy-mm-dd-filename.markdowm`**格式，例如**`2015-10-23-about.markdowm`**
+1. 博客文件名必须使用**`yyyy-mm-dd-filename.markdown`**格式，例如**`2015-10-23-about.markdown`**
 2. 博客格式
 
 ![博客格式](/images/post_eg.png)
