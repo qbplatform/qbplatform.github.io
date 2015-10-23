@@ -7,17 +7,19 @@ title: 首页
     <!-- This loops through the paginated posts -->
     <ul>
         {% for post in paginator.posts %}
-            <li>
-                <h5>
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                </h5>
-                <span class="post-meta">Auther:{{ post.auther }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time:{{ post.date | date: "%Y-%m-%d" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                Tags:{% for category in post.categories %}
-                    {{ category }}&nbsp;&nbsp;
-                {% endfor %}</span>
-            </li>
-            <br>
+            {% if post.title != "博客使用介绍" %}
+                <li>
+                    <h5>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                    </h5>
+                    <span class="post-meta">Auther:{{ post.auther }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time:{{ post.date | date: "%Y-%m-%d" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Tags:{% for category in post.categories %}
+                        {{ category }}&nbsp;&nbsp;
+                    {% endfor %}</span>
+                </li>
+                <br>
+            {% endif %}
         {% endfor %}
     </ul>
 
