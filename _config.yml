@@ -10,7 +10,7 @@ url: "http://qbplatform.github.io" # the base hostname & protocol for your site
 github_username:  qbplatform
 
 # Build settings
-highlighter: true
+pygments: true
 excerpt_separator: "\n\n\n"
 paginate: 6
 markdown: redcarpet
