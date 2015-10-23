@@ -5,22 +5,30 @@ categories: [说明]
 date:   2015-10-23
 auther: 刘雷刚
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+#####使用准备：
+1. 有一个自己的github账号
+2. 确认您的电脑上可以执行make命令
+3.  如果您想在本地预览，请在本机安装配置jekyll
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+#####使用步骤：
+1. 登录公用github账号(用户名、密码见平台组群文件)；在qbplatform.github.io项目下添加您个人github账号为合作开发者；
+2. 拉取项目代码到本地，在本地创建一个名为 source 的分支；切换到 source 分支；
+3. 在本地编辑你的博客(使用markdown编辑工具),将编辑好的博客放到本地项目_posts目录下；
+4. 本地项目根目录下执行 `bundle exec jekyll serve`，进行本地预览
+5. 本地预览OK，在项目根目录下执行`make`命令，上传您的博客到github，稍等片刻，就可以在[qbplatform][1]上浏览自己的博客
 
-Jekyll also offers powerful support for code snippets:
+#####注意事项：
+1. 博客文件名必须使用**`yyyy-mm-dd-filename.markdowm`**格式，例如**`2015-10-23-about.markdowm`**
+2. 博客格式
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+![博客格式](/images/post_eg.png)
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+       layout:使用的输出模版
+       title:博客名
+       categories:关键字，可以是多个(英文逗号分隔)
+       date:写博客日期，最好和博客文件名一致
+       auther:作者名字
+       注意博客开始部分和结束部分的`---`
+       往下是博客的正文部分
 
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
+[1]:	<http://qbplatform.github.io/>        (qbplatform)
