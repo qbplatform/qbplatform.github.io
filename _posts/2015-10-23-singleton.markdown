@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "设计模式——单例模式(Singleton)"
-categories: [java]
+categories: [单例模式]
 date: 2015-10-23
 auther: 刘纯
 ---
